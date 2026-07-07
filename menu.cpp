@@ -13,15 +13,24 @@ void Menu(){
     Pokemon pokemon;
     char opcion;
     char opcionmenu;
+    string nombre;
+
+cout << "Hola!" << endl << endl;
+cout << "Con que tu eres el nuevo entrenador..." << endl;
+cout << "Dime, cual es tu nombre? " << endl;
+cin >> nombre;
+
+cout << "...Con que " << nombre << "..." << endl;
+cout << "Muy bien. Que empiece la aventura..." << endl;
 
     cout << endl;
     cout << "========================================" << endl;
     cout << "|       SIMULADOR BATALLA POKEMON      |" << endl;
     cout << "========================================" << endl;
-    cout << "| Bienvenido, entrenador.              |" << endl;
+    cout << "| Bienvenido, entrenador " << nombre << "." << "|" << endl;
     cout << "| Tu aventura esta por comenzar.       |" << endl;
     cout << "========================================" << endl;
-    cout << "| Deseas cargar tu partida anterior?   |" << endl;
+    cout << "| Deseas cargar la partida anterior?   |" << endl;
     cout << "| [S] Si                               |" << endl;
     cout << "| [N] No                               |" << endl;
     cout << "========================================" << endl;
@@ -115,7 +124,7 @@ void Menu(){
             break;
         }
 
-        else 
+        else {
         cout << endl;
         cout << "========================================" << endl;
         cout << "|            OPCION INVALIDA           |" << endl;
@@ -123,5 +132,6 @@ void Menu(){
         cout << "| Esa opcion no existe.                |" << endl;
         cout << "| Intenta de nuevo.                    |" << endl;
         cout << "========================================" << endl;
+        }
 }
 }

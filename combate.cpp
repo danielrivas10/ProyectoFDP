@@ -37,14 +37,18 @@ srand(time(0));
         cin >> opcion;
         
         switch (opcion){
-
+// Ataques especiales tienen 10 de daño más que el daño base
             case 'A':
         {
                 if (pokemon.nombre == "Squirtle")
                 {
-                    pokemon.fuerza = 15;
+                    pokemon.fuerza = pokemon.fuerza;
                     ataque = "Pistola agua";
                     vidaPokemonEnemigo -= pokemon.fuerza;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                     cout << endl;
                     cout << "========================================" << endl;
                     cout << "|              ATAQUE                  |" << endl;
@@ -56,8 +60,13 @@ srand(time(0));
                 } 
                     else if (pokemon.nombre == "Charmander")
                     {
+                        pokemon.fuerza = pokemon.fuerza;
                         ataque = "Ascuas";
-                        vidaPokemonEnemigo -= 15;
+                        vidaPokemonEnemigo -= pokemon.fuerza;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                         cout << endl;
                         cout << "========================================" << endl;
                         cout << "|              ATAQUE                  |" << endl;
@@ -69,8 +78,13 @@ srand(time(0));
                     }
                                 else if (pokemon.nombre == "Bulbasaur")
                                 {
+                                    pokemon.fuerza = pokemon.fuerza;
                                     ataque = "Latigo Cepa";
-                                    vidaPokemonEnemigo -= 15;
+                                    vidaPokemonEnemigo -= pokemon.fuerza;
+                                    if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                                     cout << endl;
                                     cout << "========================================" << endl;
                                     cout << "|              ATAQUE                  |" << endl;
@@ -88,8 +102,13 @@ srand(time(0));
         {
                 if (pokemon.nombre == "Squirtle")
                 {
+                    pokemon.fuerza = pokemon.fuerza;
                     ataque = "Pistola agua";
-                    vidaPokemonEnemigo -= 15;
+                    vidaPokemonEnemigo -= pokemon.fuerza;
+                    if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                     cout << endl;
                     cout << "========================================" << endl;
                     cout << "|              ATAQUE                  |" << endl;
@@ -101,8 +120,13 @@ srand(time(0));
                 } 
                     else if (pokemon.nombre == "Charmander")
                     {
+                        pokemon.fuerza = pokemon.fuerza;
                         ataque = "Ascuas";
-                        vidaPokemonEnemigo -= 15;
+                        vidaPokemonEnemigo -= pokemon.fuerza;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                         cout << endl;
                         cout << "========================================" << endl;
                         cout << "|              ATAQUE                  |" << endl;
@@ -114,8 +138,13 @@ srand(time(0));
                     }
                         else if (pokemon.nombre == "Bulbasaur")
                         {
+                            pokemon.fuerza = pokemon.fuerza;
                             ataque = "Latigo Cepa";
-                            vidaPokemonEnemigo -= 15;
+                            vidaPokemonEnemigo -= pokemon.fuerza;
+                            if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                             cout << endl;
                             cout << "========================================" << endl;
                             cout << "|              ATAQUE                  |" << endl;
@@ -132,8 +161,13 @@ srand(time(0));
         {
                 if (pokemon.nombre == "Squirtle")
                 {
+                    pokemon.fuerza = pokemon.fuerza - 5;
                     ataque = "Burbuja";
-                    vidaPokemonEnemigo -= 10;
+                    vidaPokemonEnemigo -= pokemon.fuerza;
+                    if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                     cout << endl;
                     cout << "========================================" << endl;
                     cout << "|              ATAQUE                  |" << endl;
@@ -142,11 +176,17 @@ srand(time(0));
                     cout << "| El enemigo recibe dano.              |" << endl;
                     cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                     cout << "========================================" << endl << endl;
+                    pokemon.fuerza = pokemon.fuerza + 5;
                 }
                     else if (pokemon.nombre == "Charmander")   
                     {
+                        pokemon.fuerza = pokemon.fuerza + 10;
                         ataque = "Lanzallamas";
-                        vidaPokemonEnemigo -= 30;
+                        vidaPokemonEnemigo -= pokemon.fuerza;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                         cout << endl;
                         cout << "========================================" << endl;
                         cout << "|              ATAQUE                  |" << endl;
@@ -155,11 +195,17 @@ srand(time(0));
                         cout << "| El enemigo recibe dano.              |" << endl;
                         cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                         cout << "========================================" << endl << endl;
+                        pokemon.fuerza = pokemon.fuerza - 10;
                     }
                         else if (pokemon.nombre == "Bulbasaur")
                         {
                             ataque = "Hoja Afilada";
-                            vidaPokemonEnemigo -= 20;
+                            pokemon.fuerza = pokemon.fuerza;
+                            vidaPokemonEnemigo -= pokemon.fuerza + 4;
+                            if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                             cout << endl;
                             cout << "========================================" << endl;
                             cout << "|              ATAQUE                  |" << endl;
@@ -168,6 +214,7 @@ srand(time(0));
                             cout << "| El enemigo recibe dano.              |" << endl;
                             cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                             cout << "========================================" << endl << endl;
+                            pokemon.fuerza = pokemon.fuerza - 4;
                         }
                 break;
         }
@@ -176,8 +223,13 @@ srand(time(0));
         {
             if (pokemon.nombre == "Squirtle")
             {
+                pokemon.fuerza = pokemon.fuerza - 5;
                 ataque = "Burbuja";
-                vidaPokemonEnemigo -= 10;
+                vidaPokemonEnemigo -= pokemon.fuerza;
+                if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                 cout << endl;
                 cout << "========================================" << endl;
                 cout << "|              ATAQUE                  |" << endl;
@@ -186,11 +238,17 @@ srand(time(0));
                 cout << "| El enemigo recibe dano.              |" << endl;
                 cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                 cout << "========================================" << endl << endl;
+                pokemon.fuerza = pokemon.fuerza + 5;;
             }
                     else if (pokemon.nombre == "Charmander")   
                     {
+                        pokemon.fuerza = pokemon.fuerza + 10;
                         ataque = "Lanzallamas";
-                        vidaPokemonEnemigo -= 30;
+                        vidaPokemonEnemigo -= pokemon.fuerza;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                         cout << endl;
                         cout << "========================================" << endl;
                         cout << "|              ATAQUE                  |" << endl;
@@ -199,11 +257,17 @@ srand(time(0));
                         cout << "| El enemigo recibe dano.              |" << endl;
                         cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                         cout << "========================================" << endl << endl;
+                        pokemon.fuerza = pokemon.fuerza - 10;
                     }
                         else if (pokemon.nombre == "Bulbasaur")
                         {
+                            pokemon.fuerza = pokemon.fuerza + 4;
                             ataque = "Hoja Afilada";
-                            vidaPokemonEnemigo -= 20;
+                            vidaPokemonEnemigo -= pokemon.fuerza;
+                            if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                             cout << endl;
                             cout << "========================================" << endl;
                             cout << "|              ATAQUE                  |" << endl;
@@ -212,6 +276,7 @@ srand(time(0));
                             cout << "| El enemigo recibe dano.              |" << endl;
                             cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                             cout << "========================================" << endl << endl;
+                            pokemon.fuerza = pokemon.fuerza - 4;
                         }
                 break;
         }
@@ -220,8 +285,13 @@ srand(time(0));
         {
             if (pokemon.nombre == "Squirtle")
             {
+                pokemon.fuerza = pokemon.fuerza + 2;
                 ataque = "Placaje";
-                vidaPokemonEnemigo -= 12;
+                vidaPokemonEnemigo -= pokemon.fuerza;
+                if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                 cout << endl;
                 cout << "========================================" << endl;
                 cout << "|              ATAQUE                  |" << endl;
@@ -230,11 +300,17 @@ srand(time(0));
                 cout << "| El enemigo recibe dano.              |" << endl;
                 cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                 cout << "========================================" << endl << endl;
+                pokemon.fuerza = pokemon.fuerza - 2;
             }
                 else if (pokemon.nombre == "Charmander")
                 {
+                    pokemon.fuerza = pokemon.fuerza;
                     ataque = "Araniazo";
-                    vidaPokemonEnemigo -= 10;
+                    vidaPokemonEnemigo -= pokemon.fuerza;
+                    if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                     cout << endl;
                     cout << "========================================" << endl;
                     cout << "|              ATAQUE                  |" << endl;
@@ -246,16 +322,24 @@ srand(time(0));
                 }
                     else if (pokemon.nombre == "Bulbasaur")
                     {
+                         pokemon.fuerza = pokemon.fuerza + 10;
                         ataque = "Drenadoras";
-                        vidaPokemonEnemigo -= 30;
+                        vidaPokemonEnemigo -= pokemon.fuerza;
+                        pokemon.vida += vidaPokemonEnemigo * 0.5;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                         cout << endl;
                         cout << "========================================" << endl;
                         cout << "|              ATAQUE                  |" << endl;
                         cout << "========================================" << endl;
                         cout << "| " << pokemon.nombre << " utiliza " << ataque << "!" << endl;
                         cout << "| El enemigo recibe dano.              |" << endl;
+                        cout << "| Bulbasaur recupera vida!             |" << endl;
                         cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                         cout << "========================================" << endl << endl;
+                        pokemon.fuerza = pokemon.fuerza - 10;
                     }
                 break;
         }
@@ -264,8 +348,13 @@ srand(time(0));
         {
             if (pokemon.nombre == "Squirtle")
             {
+                pokemon.fuerza = pokemon.fuerza + 2;
                 ataque = "Placaje";
-                vidaPokemonEnemigo -= 12;
+                vidaPokemonEnemigo -= pokemon.fuerza;
+                if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                 cout << endl;
                 cout << "========================================" << endl;
                 cout << "|              ATAQUE                  |" << endl;
@@ -274,11 +363,17 @@ srand(time(0));
                 cout << "| El enemigo recibe dano.              |" << endl;
                 cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                 cout << "========================================" << endl << endl;
+                pokemon.fuerza = pokemon.fuerza - 2;
             }
                 else if (pokemon.nombre == "Charmander")
                 {
+                    pokemon.fuerza = pokemon.fuerza;
                     ataque = "Araniazo";
-                    vidaPokemonEnemigo -= 10;
+                    vidaPokemonEnemigo -= pokemon.fuerza;
+                    if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                     cout << endl;
                     cout << "========================================" << endl;
                     cout << "|              ATAQUE                  |" << endl;
@@ -290,18 +385,22 @@ srand(time(0));
                 }
                     else if (pokemon.nombre == "Bulbasaur")
                     {
+                        pokemon.fuerza = pokemon.fuerza + 10;
                         ataque = "Drenadoras";
-                        vidaPokemonEnemigo -= 30;
-                        pokemon.vida += 30 * 0.5;
+                        vidaPokemonEnemigo -= pokemon.fuerza;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                         cout << endl;
                         cout << "========================================" << endl;
                         cout << "|              ATAQUE                  |" << endl;
                         cout << "========================================" << endl;
                         cout << "| " << pokemon.nombre << " utiliza " << ataque << "!" << endl;
                         cout << "| El enemigo recibe dano.              |" << endl;
-                        cout << "| Bulbasaur recupera energia!          |" << endl;
                         cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                         cout << "========================================" << endl << endl;
+                        pokemon.fuerza = pokemon.fuerza - 10;
                     }
             break;
         }
@@ -310,8 +409,13 @@ srand(time(0));
         {
             if (pokemon.nombre == "Squirtle")
             {
+                pokemon.fuerza = pokemon.fuerza + 10;
                 ataque = "Hidrobomba";
-                vidaPokemonEnemigo -= 30;
+                vidaPokemonEnemigo -= pokemon.fuerza;
+                if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                 cout << endl;
                 cout << "========================================" << endl;
                 cout << "|              ATAQUE                  |" << endl;
@@ -320,11 +424,17 @@ srand(time(0));
                 cout << "| Es un golpe muy poderoso!            |" << endl;
                 cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                 cout << "========================================" << endl << endl;
+                pokemon.fuerza = pokemon.fuerza - 10;
             }
                 else if (pokemon.nombre == "Charmander")
                 {
+                    pokemon.fuerza = pokemon.fuerza + 2;
                     ataque = "Giro Fuego";
-                    vidaPokemonEnemigo -= 20;
+                    vidaPokemonEnemigo -= pokemon.fuerza;
+                    if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                     cout << endl;
                     cout << "========================================" << endl;
                     cout << "|              ATAQUE                  |" << endl;
@@ -333,11 +443,17 @@ srand(time(0));
                     cout << "| Las llamas rodean al enemigo!        |" << endl;
                     cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                     cout << "========================================" << endl << endl;
+                    pokemon.fuerza = pokemon.fuerza - 2;
                 }
                     else if (pokemon.nombre == "Bulbasaur") 
                     {
+                        pokemon.fuerza = pokemon.fuerza;
                         ataque = "Placaje";
-                        vidaPokemonEnemigo -= 12;
+                        vidaPokemonEnemigo -= pokemon.fuerza;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                         cout << endl;
                         cout << "========================================" << endl;
                         cout << "|              ATAQUE                  |" << endl;
@@ -354,8 +470,13 @@ srand(time(0));
         {
             if (pokemon.nombre == "Squirtle")
             {
+                pokemon.fuerza = pokemon.fuerza + 10;
                 ataque = "Hidrobomba";
-                vidaPokemonEnemigo -= 30;
+                vidaPokemonEnemigo -= pokemon.fuerza;
+                if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                 cout << endl;
                 cout << "========================================" << endl;
                 cout << "|              ATAQUE                  |" << endl;
@@ -364,11 +485,17 @@ srand(time(0));
                 cout << "| Es un golpe muy poderoso!            |" << endl;
                 cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                 cout << "========================================" << endl << endl;
+                pokemon.fuerza = pokemon.fuerza - 10;
             }
                 else if (pokemon.nombre == "Charmander")
                 {
+                    pokemon.fuerza = pokemon.fuerza + 2;
                     ataque = "Giro Fuego";
                     vidaPokemonEnemigo -= 20;
+                    if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                     cout << endl;
                     cout << "========================================" << endl;
                     cout << "|              ATAQUE                  |" << endl;
@@ -377,11 +504,17 @@ srand(time(0));
                     cout << "| Las llamas rodean al enemigo!        |" << endl;
                     cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                     cout << "========================================" << endl << endl;
+                    pokemon.fuerza = pokemon.fuerza - 2;
                 }
                     else if (pokemon.nombre == "Bulbasaur") 
                     {
+                        pokemon.fuerza = pokemon.fuerza;
                         ataque = "Placaje";
-                        vidaPokemonEnemigo -= 12;
+                        vidaPokemonEnemigo -= pokemon.fuerza;
+                        if (vidaPokemonEnemigo <= 0)
+                        {
+                            vidaPokemonEnemigo = 0;
+                        }
                         cout << endl;
                         cout << "========================================" << endl;
                         cout << "|              ATAQUE                  |" << endl;
@@ -406,10 +539,16 @@ srand(time(0));
         }
 
         }
-        // El enemigo contraataca 
+
+
+            // El enemigo contraataca 
         if (vidaPokemonEnemigo > 0)
         {
         pokemon.vida -= atkPokemonEnemigo;
+            if (pokemon.vida <= 0)
+            {
+                pokemon.vida = 0;
+            } 
         cout << endl;
         cout << "========================================" << endl;
         cout << "|         CONTRAATAQUE ENEMIGO         |" << endl;
@@ -419,6 +558,22 @@ srand(time(0));
         cout << "| Vida actual de " << pokemon.nombre << ": " << pokemon.vida << " HP" << endl;
         cout << "========================================" << endl << endl;
         }
+        
+        if (pokemon.vida <=0) {
+
+            cout << endl;
+            cout << "========================================" << endl;
+            cout << "|              DERROTA                 |" << endl;
+            cout << "========================================" << endl;
+            cout << "| Tu Pokemon ya no puede continuar.    |" << endl;
+            cout << "| Has sido derrotado.                  |" << endl;
+            cout << "| Fin del juego.                       |" << endl;
+            cout << "========================================" << endl << endl;
+            pokemon.vida = 0;
+        return; 
+            }
+
+        
         if (vidaPokemonEnemigo <=0){
 
             cout << endl;
@@ -437,6 +592,7 @@ srand(time(0));
                 pokemon.nivel++;
                 pokemon.vida += 10;
                 pokemon.fuerza += 5;
+                pokemon.experiencia = 0;
             cout << endl;
             cout << "========================================" << endl;
             cout << "|             NIVEL AUMENTADO          |" << endl;
@@ -445,6 +601,8 @@ srand(time(0));
             cout << "| Vida aumentada en +10                |" << endl;
             cout << "| Fuerza aumentada en +5               |" << endl;
             cout << "========================================" << endl << endl;
+
+            MostrarPokemon(pokemon);
             }
             else
             {
@@ -453,17 +611,5 @@ srand(time(0));
             return;
         }
 
-        if (pokemon.vida <=0) {
-
-            cout << endl;
-            cout << "========================================" << endl;
-            cout << "|              DERROTA                 |" << endl;
-            cout << "========================================" << endl;
-            cout << "| Tu Pokemon ya no puede continuar.    |" << endl;
-            cout << "| Has sido derrotado.                  |" << endl;
-            cout << "| Fin del juego.                       |" << endl;
-            cout << "========================================" << endl << endl;
-        return; 
-            }
     }
 }
