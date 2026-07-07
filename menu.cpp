@@ -14,17 +14,39 @@ void Menu(){
     char opcion;
     char opcionmenu;
 
-    cout << "Bienvenido al simulador de batalla pokemon" << endl;
-    cout << "Deseas cargar tu partida anterior? (s/n): ";
+    cout << endl;
+    cout << "========================================" << endl;
+    cout << "|       SIMULADOR BATALLA POKEMON      |" << endl;
+    cout << "========================================" << endl;
+    cout << "| Bienvenido, entrenador.              |" << endl;
+    cout << "| Tu aventura esta por comenzar.       |" << endl;
+    cout << "========================================" << endl;
+    cout << "| Deseas cargar tu partida anterior?   |" << endl;
+    cout << "| [S] Si                               |" << endl;
+    cout << "| [N] No                               |" << endl;
+    cout << "========================================" << endl;
+    cout << "Opcion: ";
     cin >> opcion;
 
     if (opcion == 's' || opcion == 'S') {
         if (CargarPartida(pokemon)){
-        cout << "Partida cargada exitosamente." << endl;
+        cout << endl;
+        cout << "========================================" << endl;
+        cout << "|          PARTIDA CARGADA             |" << endl;
+        cout << "========================================" << endl;
+        cout << "| Tus datos fueron recuperados.        |" << endl;
+        cout << "| Continua tu aventura Pokemon.        |" << endl;
+        cout << "========================================" << endl;
         MostrarPokemon(pokemon);
     }
     else {
-        cout << "No se encontro ningun archivo de guardado. Creando nueva partida..." << endl;
+        cout << endl;
+        cout << "========================================" << endl;
+        cout << "|         NUEVA PARTIDA                |" << endl;
+        cout << "========================================" << endl;
+        cout << "| No se encontro archivo guardado.     |" << endl;
+        cout << "| Creando una nueva aventura...        |" << endl;
+        cout << "========================================" << endl;
         ElegirPokemon(pokemon);
     }
 }
@@ -33,14 +55,19 @@ void Menu(){
         ElegirPokemon(pokemon);
     }
 
-    //Menu Bucle
     while (pokemon.vida > 0 || opcionmenu!= 'A' || opcionmenu != 'a' || opcionmenu != 'B' || opcionmenu != 'b' || opcionmenu != 'C' || opcionmenu != 'c' || opcionmenu != 'D' || opcionmenu != 'd' || opcionmenu != 'E' || opcionmenu != 'e') {
-        cout << endl << "Que deseas hacer?" << endl;
-        cout << "A. Luchar\n";
-        cout << "B. Guardar partida\n";
-        cout << "C. Ver estadisticas de tu pokemon\n";
-        cout << "D. Ver movimientos de tu pokemon\n";   
-        cout << "E. Salir\n";
+        cout << endl;
+        cout << "========================================" << endl;
+        cout << "|              MENU PRINCIPAL          |" << endl;
+        cout << "========================================" << endl;
+        cout << "| Que deseas hacer?                    |" << endl;
+        cout << "|                                      |" << endl;
+        cout << "| [A] Luchar                           |" << endl;
+        cout << "| [B] Guardar partida                  |" << endl;
+        cout << "| [C] Ver estadisticas del Pokemon     |" << endl;
+        cout << "| [D] Ver movimientos del Pokemon      |" << endl;
+        cout << "| [E] Salir                            |" << endl;
+        cout << "========================================" << endl;
         cout << "Opcion: ";
         cin >> opcionmenu;
         
@@ -51,7 +78,13 @@ void Menu(){
             }
             else
             {
-            cout << "Tu pokemon no puede luchar mas. Elige otra opcion" << endl;
+            cout << endl;
+            cout << "========================================" << endl;
+            cout << "|          NO PUEDE LUCHAR             |" << endl;
+            cout << "========================================" << endl;
+            cout << "| Tu Pokemon no tiene fuerzas.         |" << endl;
+            cout << "| Elige otra opcion del menu.          |" << endl;
+            cout << "========================================" << endl;
                 }
         }
 
@@ -72,11 +105,23 @@ void Menu(){
         
         else if (opcionmenu == 'E' || opcionmenu == 'e'){
 
-            cout << "Saliendo del programa. Buen dia." << endl;
+            cout << endl;
+            cout << "========================================" << endl;
+            cout << "|              HASTA LUEGO             |" << endl;
+            cout << "========================================" << endl;
+            cout << "| Saliendo del programa...             |" << endl;
+            cout << "| Buen dia, entrenador.                |" << endl;
+            cout << "========================================" << endl;
             break;
         }
 
         else 
-        cout << "Opcion no valida. Intente de nuevo:" << endl;
+        cout << endl;
+        cout << "========================================" << endl;
+        cout << "|            OPCION INVALIDA           |" << endl;
+        cout << "========================================" << endl;
+        cout << "| Esa opcion no existe.                |" << endl;
+        cout << "| Intenta de nuevo.                    |" << endl;
+        cout << "========================================" << endl;
 }
 }
