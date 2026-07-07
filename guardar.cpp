@@ -30,7 +30,6 @@ void GuardarPartida(const Pokemon& pokemon)
         cout << "========================================" << endl;
         return;
     }
-
     archivo << pokemon.nombre << endl;
     archivo << pokemon.vida << endl;
     archivo << pokemon.experiencia << endl;

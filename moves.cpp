@@ -27,18 +27,18 @@ void MovimientosPokemon(const Pokemon& pokemon)
     cout << "| Ataques de: " << pokemon.nombre << endl;
     cout << "========================================" << endl;
 
-    string Moves_s[4] = {"A. Pistola Agua: Ataque a distancia. 15 puntos de ataque base",
-                        "B. Burbuja: 10 puntos de ataque base",
-                        "C. Placaje: Ataque fisico. 12 puntos de ataque base",
-                        "D. Hidrobomba: Ataque especial. 30 puntos de ataque base"};
-    string Moves_c[4] = {"A. Ascuas: Ataque de fuego. 15 puntos de ataque base",
-                        "B. Lanzallamas: Ataque intenso. 30 puntos de ataque base",
-                        "C. Araniazo: Ataque rapido. 10 puntos de ataque base",
-                        "D. Giro Fuego: 20 puntos de ataque base"};
-    string Moves_b[4] = {"A. Latigo Cepa: Ataque con lianas. 15 puntos de ataque base",
-                        "B. Hoja Afilada: Ataque rapido. 20 puntos de ataque base",
-                        "C. Drenadoras: Hace 30 puntos de ataque base",
-                        "D. Placaje: Ataque fisico. 12 puntos de ataque base"};
+    string Moves_s[4] = {"A. Pistola Agua: Ataque a distancia. ",
+                        "B. Burbuja ",
+                        "C. Placaje: Ataque fisico. ",
+                        "D. Hidrobomba: Ataque especial. "};
+    string Moves_c[4] = {"A. Ascuas: Ataque de fuego. ",
+                        "B. Lanzallamas: Ataque especial. ",
+                        "C. Araniazo: Ataque rapido. ",
+                        "D. Giro Fuego "};
+    string Moves_b[4] = {"A. Latigo Cepa: Ataque con lianas. ",
+                        "B. Hoja Afilada: Ataque rapido. ",
+                        "C. Drenadoras: Ataque especial. ",
+                        "D. Placaje: Ataque fisico. "};
     for (int i = 0; i <= 3; i++)
     {
         if (pokemon.nombre == "Squirtle"){
