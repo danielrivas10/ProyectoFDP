@@ -19,7 +19,6 @@ void ElegirPokemon(Pokemon& pokemon){
 if (opcion == 'A' || opcion == 'a')
     {
         pokemon.nombre = "Squirtle";
-<<<<<<< HEAD
         pokemon.vida = 25;
         pokemon.fuerza = 18;
         pokemon.nivel = 4;
@@ -35,15 +34,12 @@ if (opcion == 'A' || opcion == 'a')
         pokemon.vida = 30;
         pokemon.fuerza = 22;
         pokemon.nivel = 5;
-=======
 if (opcion == 'A' || opcion == 'a')
->>>>>>> 338b1c284155d757a7237a17bc16ac9f1fe64580
         pokemon.experiencia = 0;
         MostrarPokemon(pokemon);
 
     }
 
-<<<<<<< HEAD
     else if (opcion == 'C' || opcion == 'c')
     {
         pokemon.nombre = "Bulbasaur";
@@ -56,7 +52,4 @@ if (opcion == 'A' || opcion == 'a')
     }
 
 }
-=======
-}
- }  
->>>>>>> 338b1c284155d757a7237a17bc16ac9f1fe64580
+} 
