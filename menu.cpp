@@ -19,7 +19,6 @@ cout << "Hola!" << endl << endl;
 cout << "Con que tu eres el nuevo entrenador..." << endl;
 cout << "Dime, cual es tu nombre? " << endl;
 cin >> nombre;
-
 cout << "...Con que " << nombre << "..." << endl;
 cout << "Muy bien. Que empiece la aventura..." << endl;
 
@@ -27,12 +26,12 @@ cout << "Muy bien. Que empiece la aventura..." << endl;
     cout << "========================================" << endl;
     cout << "|       SIMULADOR BATALLA POKEMON      |" << endl;
     cout << "========================================" << endl;
-    cout << "| Bienvenido, entrenador " << nombre << "." << "|" << endl;
-    cout << "| Tu aventura esta por comenzar.       |" << endl;
+    cout << " Bienvenido, entrenador " << nombre << "." << endl;
+    cout << " Tu aventura esta por comenzar.       " << endl;
     cout << "========================================" << endl;
-    cout << "| Deseas cargar la partida anterior?   |" << endl;
-    cout << "| [S] Si                               |" << endl;
-    cout << "| [N] No                               |" << endl;
+    cout << " Deseas cargar la partida anterior?   " << endl;
+    cout << " [S] Si                               " << endl;
+    cout << " [N] No                               " << endl;
     cout << "========================================" << endl;
     cout << "Opcion: ";
     cin >> opcion;

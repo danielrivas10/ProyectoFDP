@@ -49,6 +49,7 @@ srand(time(0));
                         {
                             vidaPokemonEnemigo = 0;
                         }
+                        
                     cout << endl;
                     cout << "========================================" << endl;
                     cout << "|              ATAQUE                  |" << endl;
@@ -388,6 +389,7 @@ srand(time(0));
                         pokemon.fuerza = pokemon.fuerza + 10;
                         ataque = "Drenadoras";
                         vidaPokemonEnemigo -= pokemon.fuerza;
+                        pokemon.vida += vidaPokemonEnemigo * 0.5;
                         if (vidaPokemonEnemigo <= 0)
                         {
                             vidaPokemonEnemigo = 0;
@@ -398,6 +400,7 @@ srand(time(0));
                         cout << "========================================" << endl;
                         cout << "| " << pokemon.nombre << " utiliza " << ataque << "!" << endl;
                         cout << "| El enemigo recibe dano.              |" << endl;
+                        cout << "| Bulbasaur recupera vida!             |" << endl;
                         cout << "| Vida enemiga actual: " << vidaPokemonEnemigo << " HP" << endl;
                         cout << "========================================" << endl << endl;
                         pokemon.fuerza = pokemon.fuerza - 10;
