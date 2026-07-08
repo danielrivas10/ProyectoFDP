@@ -15,13 +15,29 @@ void Menu(){
     char opcionmenu;
     string nombre;
 
-cout << "Hola!" << endl << endl;
+  
+
+cout << "Hola!" << endl;
 cout << "Con que tu eres el nuevo entrenador..." << endl;
 cout << "Dime, cual es tu nombre? " << endl;
 cin >> nombre;
 cout << "...Con que " << nombre << "..." << endl;
 cout << "Muy bien. Que empiece la aventura..." << endl;
 
+cout << R"(
+
+===========================================================
+   __   __  _  ___ _  _  __  _   _
+  |  _ \ / _ \| |/ /  _|  \/  |/ _ \| \ | |
+  | |_) | |  | | ' /| |_  | \  / | |  | |  \| |
+  |  _/| |  | |  < |  __| | |\/| | |  | | . ` |
+  | |    | |_| | . \| |_| |  | | |__| | |\  |
+  ||     \_/||\\__||  ||\_/|| \_|
+
+                HEROES DE KANTO
+===========================================================
+
+)" << endl;
     cout << endl;
     cout << "========================================" << endl;
     cout << "|       SIMULADOR BATALLA POKEMON      |" << endl;
@@ -133,4 +149,5 @@ cout << "Muy bien. Que empiece la aventura..." << endl;
         cout << "========================================" << endl;
         }
 }
+
 }
