@@ -15,6 +15,7 @@ void MostrarPokemon(Pokemon& pokemon){
     cout << "| Fuerza:          " << pokemon.fuerza << endl;
     cout << "| Nivel:           " << pokemon.nivel << endl;
     cout << "========================================" << endl; 
+    
 }
 
 void MovimientosPokemon(const Pokemon& pokemon)
