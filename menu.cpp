@@ -13,7 +13,6 @@ void Menu(){
     Pokemon pokemon;
     char opcion;
     char opcionmenu;
-cout << R"(
     string nombre;
 
 cout << "Hola!" << endl << endl;
@@ -24,14 +23,14 @@ cin >> nombre;
 cout << "...Con que " << nombre << "..." << endl;
 cout << "Muy bien. Que empiece la aventura..." << endl;
 
-===========================================================
-   __   __  _  ___ _  _  __  _   _
-  |  _ \ / _ \| |/ /  _|  \/  |/ _ \| \ | |
-  | |_) | |  | | ' /| |_  | \  / | |  | |  \| |
-  |  _/| |  | |  < |  __| | |\/| | |  | | . ` |
-  | |    | |_| | . \| |_| |  | | |__| | |\  |
-  ||     \_/||\\__||  ||\_/|| \_|
+cout << R"(
 
+===========================================================
+ ____   ___  _  __ _____ __  __  ___  _   _
+|  _ \ / _ \| |/ /| ____|  \/  |/ _ \| \ | |
+| |_) | | | | ' / |  _| | |\/| | | | |  \| |
+|  __/| |_| | . \ | |___| |  | | |_| | |\  |
+|_|    \___/|_|\_\|_____|_|  |_|\___/|_| \_|
                 HEROES DE KANTO
 ===========================================================
 
@@ -77,7 +76,7 @@ cout << "Muy bien. Que empiece la aventura..." << endl;
         ElegirPokemon(pokemon);
     }
 
-    while (pokemon.vida > 0 || opcionmenu!= 'A' || opcionmenu != 'a' || opcionmenu != 'B' || opcionmenu != 'b' || opcionmenu != 'C' || opcionmenu != 'c' || opcionmenu != 'D' || opcionmenu != 'd' || opcionmenu != 'E' || opcionmenu != 'e') {
+    do{
         cout << endl;
         cout << "========================================" << endl;
         cout << "|              MENU PRINCIPAL          |" << endl;
@@ -146,5 +145,5 @@ cout << "Muy bien. Que empiece la aventura..." << endl;
         cout << "| Intenta de nuevo.                    |" << endl;
         cout << "========================================" << endl;
         }
-}
+} while ( opcionmenu!= 'A' || opcionmenu != 'a' ) ;
 }
