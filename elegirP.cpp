@@ -34,7 +34,6 @@ if (opcion == 'A' || opcion == 'a')
         pokemon.vida = 30;
         pokemon.fuerza = 22;
         pokemon.nivel = 5;
-if (opcion == 'A' || opcion == 'a')
         pokemon.experiencia = 0;
         MostrarPokemon(pokemon);
 

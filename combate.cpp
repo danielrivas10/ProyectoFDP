@@ -6,6 +6,7 @@
 #include "moves.h"
 
 void Combate(Pokemon& pokemon){
+// Parte tomada del codigo explicado por el ingeniero Miguel el 10 de junio de 2026
 srand(time(0));
     int vidaPokemonEnemigo = 30 + rand() % 20;
     int atkPokemonEnemigo = 10 + rand () % 5;
