@@ -15,6 +15,7 @@ void MostrarPokemon(Pokemon& pokemon){
     cout << " Fuerza:          " << pokemon.fuerza << endl;
     cout << " Nivel:           " << pokemon.nivel << endl;
     cout << "========================================" << endl; 
+<<<<<<< HEAD
 
     if (pokemon.nombre == "Squirtle")
     {
@@ -124,6 +125,8 @@ void MostrarPokemon(Pokemon& pokemon){
 )";
     }
 
+=======
+>>>>>>> 338b1c284155d757a7237a17bc16ac9f1fe64580
     
 }
 
